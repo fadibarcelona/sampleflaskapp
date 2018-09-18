@@ -1,5 +1,5 @@
 node {
-    dir("/home/demo"){
+    dir("/home/jenkins/workspace/Hello-container"){
     checkout scm
 
     env.DOCKER_API_VERSION="1.23"
