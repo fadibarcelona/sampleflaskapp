@@ -11,7 +11,7 @@ node {
     stage "Build"
 
         def pcImg = docker.build("https://172.16.1.1:8500/default/flask-app:${env.BUILD_ID}", "-f Dockerfile.ppc64le .")
-        sh "cp /root/.dockercfg ${HOME}/.dockercfg"
+        sh "cp /home/jenkins/workspace/Hello-container/.dockercfg ${HOME}/.dockercfg"
         pcImg.push()
 
     input 'Do you want to proceed with Deployment?'
