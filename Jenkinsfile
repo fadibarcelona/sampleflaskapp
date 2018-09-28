@@ -1,4 +1,4 @@
-node {
+node ('dbnode') {
     dir("/home/gkepoc_gmail_com"){
     checkout scm
 
