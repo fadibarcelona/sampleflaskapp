@@ -10,7 +10,7 @@ node ('dbnode') {
     docker.withRegistry('gcr.io/coastal-antler-216919/'){
     stage "Build"
          sh "sudo su -"
-        sh "sudo docker build -t gcr.io/coastal-antler-216919/default/flask-app:7 -f Dockerfile.ppc64le ."
+        
         sh "cp /home/gkepoc_gmail_com/.dockercfg /home/gkepoc_gmail_com/.dockercfg"
         
 
