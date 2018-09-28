@@ -11,7 +11,7 @@ node ('dbnode') {
     stage "Build"
 
         def pcImg = docker.build("gcr.io/coastal-antler-216919/default/flask-app:${env.BUILD_ID}", "-f Dockerfile.ppc64le .")
-        sh "cp /home/gkepoc_gmail_com/.dockercfg ${HOME}/.dockercfg"
+        sh "cp /home/gkepoc_gmail_com/.dockercfg /home/gkepoc_gmail_com/.dockercfg"
         pcImg.push()
 
     input 'Do you want to proceed with Deployment?'
