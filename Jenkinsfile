@@ -11,7 +11,7 @@ node ('dbnode') {
     stage "Build"
          sh "sudo su -"
         
-        sh "cp /home/gkepoc_gmail_com/.dockercfg /home/gkepoc_gmail_com/.dockercfg"
+        
         
 
     input 'Do you want to proceed with Deployment?'
