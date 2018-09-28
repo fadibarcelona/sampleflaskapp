@@ -1,7 +1,7 @@
 node ('dbnode') {
     dir("/home/gkepoc_gmail_com"){
     checkout scm
-
+    sh "sudo su -"
     env.DOCKER_API_VERSION="1.23"
     appName = "default/flask-app"
     registryHost = "gcr.io/coastal-antler-216919/"
