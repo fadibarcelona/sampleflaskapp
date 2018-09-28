@@ -10,9 +10,9 @@ node ('dbnode') {
     docker.withRegistry('gcr.io/coastal-antler-216919/'){
     stage "Build"
          sh "sudo su -"
-        def pcImg = sudo docker.build("gcr.io/coastal-antler-216919/default/flask-app:${env.BUILD_ID}", "-f Dockerfile.ppc64le .")
+        docker build -t gcr.io/coastal-antler-216919/default/flask-app:7 -f Dockerfile.ppc64le .
         sh "cp /home/gkepoc_gmail_com/.dockercfg /home/gkepoc_gmail_com/.dockercfg"
-        pcImg.push()
+        
 
     input 'Do you want to proceed with Deployment?'
     stage "Deploy"
